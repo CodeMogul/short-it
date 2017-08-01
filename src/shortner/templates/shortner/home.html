@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Short-It</h1>
+    <form method="POST" action=".">
+        {% csrf_token %}
+        <!--<input type="text" name="url" placeholder="url" />-->
+        {{ form.as_p }}
+        <input type="submit" value='Shorten' />
+    </form>
+{% endblock content %}
